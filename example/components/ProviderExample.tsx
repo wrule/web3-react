@@ -59,6 +59,13 @@ function Child() {
   const account = useAccount();
   const balanceInfo = useBalance(account);
 
+  useEffect(() => {
+    if (!isActive && !isActivating) {
+      // 尝试自动重连
+      connector.connectEagerly();
+    }
+  }, []);
+
   return (
     <div>
       <span>isActive: {isActive.toString()}</span>
