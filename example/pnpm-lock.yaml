@@ -22,43 +22,53 @@ importers:
         version: 5.7.0
       '@web3-react/coinbase-wallet':
         specifier: ^8.2.2
-        version: 8.2.3(@coinbase/wallet-sdk@3.9.3)(react@18.3.1)
+        version: 8.2.3(@coinbase/wallet-sdk@3.9.3)(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/core':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/eip1193':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/empty':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/gnosis-safe':
         specifier: ^8.2.3
-        version: 8.2.4(react@18.3.1)
+        version: 8.2.4(@types/react@19.0.1)(react@18.3.1)(typescript@5.7.2)
       '@web3-react/metamask':
         specifier: ^8.2.3
-        version: 8.2.4(react@18.3.1)
+        version: 8.2.4(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/network':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/types':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/url':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/walletconnect':
         specifier: ^8.2.2
-        version: 8.2.3(react@18.3.1)
+        version: 8.2.3(@types/react@19.0.1)(react@18.3.1)
       '@web3-react/walletconnect-v2':
         specifier: ^8.5.0
-        version: 8.5.1(react@18.3.1)
+        version: 8.5.1(@types/react@19.0.1)(react@18.3.1)
       next:
         specifier: ^12.1.5
         version: 12.3.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-dom:
         specifier: ^18.0.0
         version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: 22.10.1
+        version: 22.10.1
+      '@types/react':
+        specifier: 19.0.1
+        version: 19.0.1
+      typescript:
+        specifier: 5.7.2
+        version: 5.7.2
 
 packages:
 
@@ -543,6 +553,12 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
+  '@types/node@22.10.1':
+    resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
+
+  '@types/react@19.0.1':
+    resolution: {integrity: sha512-YW6614BDhqbpR5KtUYzTA+zlA7nayzJRA9ljz9CQoxthR0sDisYZLuvSMsil36t4EH/uAt8T52Xb4sVw17G+SQ==}
+
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
@@ -887,6 +903,9 @@ packages:
 
   crossws@0.3.1:
     resolution: {integrity: sha512-HsZgeVYaG+b5zA+9PbIPGq4+J/CJynJuearykPsXx4V/eMhyQ5EDVg3Ak2FBZtVXCiOLu/U7IiwDHTr9MA+IKw==}
+
+  csstype@3.1.3:
+    resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
   debug@4.4.0:
     resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
@@ -1573,6 +1592,11 @@ packages:
   typedarray-to-buffer@3.1.5:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
 
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
 
@@ -1581,6 +1605,9 @@ packages:
 
   uncrypto@0.1.3:
     resolution: {integrity: sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==}
+
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   unenv@1.10.0:
     resolution: {integrity: sha512-wY5bskBQFL9n3Eca5XnhH6KbUo/tfvkwm9OpcdCvLaeA7piBNbavbOKJySEwQ1V0RH6HvNlSAFRTpvTqgKRQXQ==}
@@ -2341,9 +2368,9 @@ snapshots:
 
   '@pedrouid/environment@1.0.1': {}
 
-  '@safe-global/safe-apps-provider@0.17.1':
+  '@safe-global/safe-apps-provider@0.17.1(typescript@5.7.2)':
     dependencies:
-      '@safe-global/safe-apps-sdk': 8.0.0
+      '@safe-global/safe-apps-sdk': 8.0.0(typescript@5.7.2)
       events: 3.3.0
     transitivePeerDependencies:
       - bufferutil
@@ -2351,20 +2378,20 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@safe-global/safe-apps-sdk@8.0.0':
+  '@safe-global/safe-apps-sdk@8.0.0(typescript@5.7.2)':
     dependencies:
       '@safe-global/safe-gateway-typescript-sdk': 3.22.4
-      viem: 1.21.4
+      viem: 1.21.4(typescript@5.7.2)
     transitivePeerDependencies:
       - bufferutil
       - typescript
       - utf-8-validate
       - zod
 
-  '@safe-global/safe-apps-sdk@8.1.0':
+  '@safe-global/safe-apps-sdk@8.1.0(typescript@5.7.2)':
     dependencies:
       '@safe-global/safe-gateway-typescript-sdk': 3.22.4
-      viem: 1.21.4
+      viem: 1.21.4(typescript@5.7.2)
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -2489,6 +2516,14 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
+  '@types/node@22.10.1':
+    dependencies:
+      undici-types: 6.20.0
+
+  '@types/react@19.0.1':
+    dependencies:
+      csstype: 3.1.3
+
   '@types/trusted-types@2.0.7': {}
 
   '@walletconnect/browser-utils@1.8.0':
@@ -2589,14 +2624,14 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  '@walletconnect/ethereum-provider@2.17.2(react@18.3.1)':
+  '@walletconnect/ethereum-provider@2.17.2(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@walletconnect/jsonrpc-http-connection': 1.0.8
       '@walletconnect/jsonrpc-provider': 1.0.14
       '@walletconnect/jsonrpc-types': 1.0.4
       '@walletconnect/jsonrpc-utils': 1.0.8
       '@walletconnect/keyvaluestorage': 1.1.1
-      '@walletconnect/modal': 2.7.0(react@18.3.1)
+      '@walletconnect/modal': 2.7.0(@types/react@19.0.1)(react@18.3.1)
       '@walletconnect/sign-client': 2.17.2
       '@walletconnect/types': 2.17.2
       '@walletconnect/universal-provider': 2.17.2
@@ -2701,16 +2736,16 @@ snapshots:
 
   '@walletconnect/mobile-registry@1.4.0': {}
 
-  '@walletconnect/modal-core@2.7.0(react@18.3.1)':
+  '@walletconnect/modal-core@2.7.0(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      valtio: 1.11.2(react@18.3.1)
+      valtio: 1.11.2(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - react
 
-  '@walletconnect/modal-ui@2.7.0(react@18.3.1)':
+  '@walletconnect/modal-ui@2.7.0(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      '@walletconnect/modal-core': 2.7.0(react@18.3.1)
+      '@walletconnect/modal-core': 2.7.0(@types/react@19.0.1)(react@18.3.1)
       lit: 2.8.0
       motion: 10.16.2
       qrcode: 1.5.3
@@ -2718,10 +2753,10 @@ snapshots:
       - '@types/react'
       - react
 
-  '@walletconnect/modal@2.7.0(react@18.3.1)':
+  '@walletconnect/modal@2.7.0(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      '@walletconnect/modal-core': 2.7.0(react@18.3.1)
-      '@walletconnect/modal-ui': 2.7.0(react@18.3.1)
+      '@walletconnect/modal-core': 2.7.0(@types/react@19.0.1)(react@18.3.1)
+      '@walletconnect/modal-ui': 2.7.0(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -2933,21 +2968,21 @@ snapshots:
       '@walletconnect/window-getters': 1.0.1
       tslib: 1.14.1
 
-  '@web3-react/coinbase-wallet@8.2.3(@coinbase/wallet-sdk@3.9.3)(react@18.3.1)':
+  '@web3-react/coinbase-wallet@8.2.3(@coinbase/wallet-sdk@3.9.3)(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@coinbase/wallet-sdk': 3.9.3
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - immer
       - react
 
-  '@web3-react/core@8.2.3(react@18.3.1)':
+  '@web3-react/core@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      '@web3-react/store': 8.2.3(react@18.3.1)
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/store': 8.2.3(@types/react@19.0.1)(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
       react: 18.3.1
-      zustand: 4.4.0(react@18.3.1)
+      zustand: 4.4.0(@types/react@19.0.1)(react@18.3.1)
     optionalDependencies:
       '@ethersproject/providers': 5.7.2
     transitivePeerDependencies:
@@ -2956,28 +2991,28 @@ snapshots:
       - immer
       - utf-8-validate
 
-  '@web3-react/eip1193@8.2.3(react@18.3.1)':
+  '@web3-react/eip1193@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
       eventemitter3: 4.0.7
     transitivePeerDependencies:
       - '@types/react'
       - immer
       - react
 
-  '@web3-react/empty@8.2.3(react@18.3.1)':
+  '@web3-react/empty@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - immer
       - react
 
-  '@web3-react/gnosis-safe@8.2.4(react@18.3.1)':
+  '@web3-react/gnosis-safe@8.2.4(@types/react@19.0.1)(react@18.3.1)(typescript@5.7.2)':
     dependencies:
-      '@safe-global/safe-apps-provider': 0.17.1
-      '@safe-global/safe-apps-sdk': 8.1.0
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@safe-global/safe-apps-provider': 0.17.1(typescript@5.7.2)
+      '@safe-global/safe-apps-sdk': 8.1.0(typescript@5.7.2)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - bufferutil
@@ -2987,19 +3022,19 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@web3-react/metamask@8.2.4(react@18.3.1)':
+  '@web3-react/metamask@8.2.4(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@metamask/detect-provider': 1.2.0
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - immer
       - react
 
-  '@web3-react/network@8.2.3(react@18.3.1)':
+  '@web3-react/network@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@ethersproject/providers': 5.7.2
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - bufferutil
@@ -3007,28 +3042,28 @@ snapshots:
       - react
       - utf-8-validate
 
-  '@web3-react/store@8.2.3(react@18.3.1)':
+  '@web3-react/store@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@ethersproject/address': 5.7.0
-      '@web3-react/types': 8.2.3(react@18.3.1)
-      zustand: 4.4.0(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
+      zustand: 4.4.0(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - immer
       - react
 
-  '@web3-react/types@8.2.3(react@18.3.1)':
+  '@web3-react/types@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      zustand: 4.4.0(react@18.3.1)
+      zustand: 4.4.0(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - immer
       - react
 
-  '@web3-react/url@8.2.3(react@18.3.1)':
+  '@web3-react/url@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@ethersproject/providers': 5.7.2
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - bufferutil
@@ -3036,11 +3071,11 @@ snapshots:
       - react
       - utf-8-validate
 
-  '@web3-react/walletconnect-v2@8.5.1(react@18.3.1)':
+  '@web3-react/walletconnect-v2@8.5.1(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
-      '@walletconnect/ethereum-provider': 2.17.2(react@18.3.1)
-      '@walletconnect/modal': 2.7.0(react@18.3.1)
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@walletconnect/ethereum-provider': 2.17.2(@types/react@19.0.1)(react@18.3.1)
+      '@walletconnect/modal': 2.7.0(@types/react@19.0.1)(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
       eventemitter3: 4.0.7
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -3063,10 +3098,10 @@ snapshots:
       - react
       - utf-8-validate
 
-  '@web3-react/walletconnect@8.2.3(react@18.3.1)':
+  '@web3-react/walletconnect@8.2.3(@types/react@19.0.1)(react@18.3.1)':
     dependencies:
       '@walletconnect/ethereum-provider': 1.8.0
-      '@web3-react/types': 8.2.3(react@18.3.1)
+      '@web3-react/types': 8.2.3(@types/react@19.0.1)(react@18.3.1)
       eventemitter3: 4.0.7
     transitivePeerDependencies:
       - '@types/react'
@@ -3077,7 +3112,9 @@ snapshots:
       - react
       - utf-8-validate
 
-  abitype@0.9.8: {}
+  abitype@0.9.8(typescript@5.7.2):
+    optionalDependencies:
+      typescript: 5.7.2
 
   acorn@8.14.0: {}
 
@@ -3232,6 +3269,8 @@ snapshots:
   crossws@0.3.1:
     dependencies:
       uncrypto: 0.1.3
+
+  csstype@3.1.3: {}
 
   debug@4.4.0:
     dependencies:
@@ -3924,6 +3963,8 @@ snapshots:
     dependencies:
       is-typedarray: 1.0.0
 
+  typescript@5.7.2: {}
+
   ufo@1.5.4: {}
 
   uint8arrays@3.1.0:
@@ -3931,6 +3972,8 @@ snapshots:
       multiformats: 9.9.0
 
   uncrypto@0.1.3: {}
+
+  undici-types@6.20.0: {}
 
   unenv@1.10.0:
     dependencies:
@@ -3971,23 +4014,26 @@ snapshots:
 
   uuid@9.0.1: {}
 
-  valtio@1.11.2(react@18.3.1):
+  valtio@1.11.2(@types/react@19.0.1)(react@18.3.1):
     dependencies:
       proxy-compare: 2.5.1
       use-sync-external-store: 1.2.0(react@18.3.1)
     optionalDependencies:
+      '@types/react': 19.0.1
       react: 18.3.1
 
-  viem@1.21.4:
+  viem@1.21.4(typescript@5.7.2):
     dependencies:
       '@adraffy/ens-normalize': 1.10.0
       '@noble/curves': 1.2.0
       '@noble/hashes': 1.3.2
       '@scure/bip32': 1.3.2
       '@scure/bip39': 1.2.1
-      abitype: 0.9.8
+      abitype: 0.9.8(typescript@5.7.2)
       isows: 1.0.3(ws@8.13.0)
       ws: 8.13.0
+    optionalDependencies:
+      typescript: 5.7.2
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -4069,8 +4115,9 @@ snapshots:
       y18n: 4.0.3
       yargs-parser: 18.1.3
 
-  zustand@4.4.0(react@18.3.1):
+  zustand@4.4.0(@types/react@19.0.1)(react@18.3.1):
     dependencies:
       use-sync-external-store: 1.2.0(react@18.3.1)
     optionalDependencies:
+      '@types/react': 19.0.1
       react: 18.3.1
