@@ -52,13 +52,17 @@ const useBalance = (address: string) => {
 
 function Child() {
   const { connector } = useWeb3React();
-  const { useAccounts, useAccount, useProvider } = metaMaskHooks;
+  const { useAccounts, useAccount, useIsActive, useIsActivating } = metaMaskHooks;
 
+  const isActive = useIsActive();
+  const isActivating = useIsActivating();
   const account = useAccount();
   const balanceInfo = useBalance(account);
 
   return (
     <div>
+      <span>isActive: {isActive.toString()}</span>
+      <span>isActivating: {isActivating.toString()}</span>
       <span>账户：{account}</span>
       <span>余额：{balanceInfo.balance?.toString()}</span>
       <button onClick={async () => {
