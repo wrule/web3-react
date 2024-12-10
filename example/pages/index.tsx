@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
       <ProviderExample />
-      <div style={{ display: 'flex', flexFlow: 'wrap', fontFamily: 'sans-serif' }}>
+      {/* <div style={{ display: 'flex', flexFlow: 'wrap', fontFamily: 'sans-serif' }}>
         <MetaMaskCard />
         <WalletConnectV2Card />
         <CoinbaseWalletCard />
         <NetworkCard />
         <GnosisSafeCard />
-      </div>
+      </div> */}
     </>
   )
 }

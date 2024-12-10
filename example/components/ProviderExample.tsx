@@ -11,6 +11,8 @@ import { hooks as networkHooks, network } from '../connectors/network'
 import { hooks as walletConnectHooks, walletConnect } from '../connectors/walletConnect'
 import { hooks as walletConnectV2Hooks, walletConnectV2 } from '../connectors/walletConnectV2'
 import { getName } from '../utils'
+import { useCallback, useEffect, useState } from 'react'
+import { BigNumber } from '@ethersproject/bignumber'
 
 const connectors: [MetaMask | WalletConnect | WalletConnectV2 | CoinbaseWallet | Network, Web3ReactHooks][] = [
   [metaMask, metaMaskHooks],
@@ -20,10 +22,50 @@ const connectors: [MetaMask | WalletConnect | WalletConnectV2 | CoinbaseWallet |
   [network, networkHooks],
 ]
 
+const { useProvider } = metaMaskHooks;
+
+const useBalance = (address: string) => {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [balance, setBalance] = useState<BigNumber | null>(null);
+  const provider = useProvider();
+
+  const updateBalance = useCallback(async () => {
+    setLoading(true);
+    try {
+      if (address && provider) {
+        setBalance(await provider.getBalance(address));
+      } else {
+        setBalance(null);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+    setLoading(false);
+  }, [address, provider, setLoading, setBalance]);
+
+  useEffect(() => {
+    updateBalance();
+  }, [address, provider]);
+
+  return { balance, loading };
+}
+
 function Child() {
-  const { connector } = useWeb3React()
-  console.log(`Priority Connector is: ${getName(connector)}`)
-  return null
+  const { connector } = useWeb3React();
+  const { useAccounts, useAccount, useProvider } = metaMaskHooks;
+
+  const account = useAccount();
+  const balanceInfo = useBalance(account);
+
+  return (
+    <div>
+      <span>账户：{account}</span>
+      <span>余额：{balanceInfo.balance?.toString()}</span>
+      <button onClick={async () => {
+        await connector.activate();
+      }}>连接</button>
+    </div>
+  );
 }
 
 export default function ProviderExample() {
